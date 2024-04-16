@@ -6,7 +6,7 @@
     "start": "parcel index.html",
     "build": "parcel build index.html --dist-dir ./dist"
   },
-  "author": "",
+  "author": "Caio Bettoni",
   "license": "ISC",
   "dependencies": {
     "@fullcalendar/core": "^6.1.11",

@@ -1,5 +1,5 @@
 // De: https://github.com/joaopbini/feriados-brasil/blob/master/dados/feriados/facultativo/json/2024.json
-import Feriados from "./Feriados";
+import { formatarFeriado } from "./Feriados";
 const feriadosFacultativos = [
   {
     data: "12/02/2024",
@@ -222,7 +222,7 @@ const feriadosFacultativos = [
   },
 ];
 
-// Exportando o formato esperado pelo calendário com a classe parente Feriados
+// Envia os dados para serem formatados e retorna para o que chamou está função
 export const feriadosFacul = feriadosFacultativos.map(feri => {
-    return Feriados.formatarFeriado(feri,"facultativo","blue")
+    return formatarFeriado(feri,"facultativo","blue")
 })

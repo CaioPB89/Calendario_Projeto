@@ -2,17 +2,20 @@
 import { Calendar } from "@fullcalendar/core";
 import ptLocale from "@fullcalendar/core/locales/pt-br"; // Usar português
 import dayGridPlugin from "@fullcalendar/daygrid";
-import { feriadosFacul } from "./src/js/Feriados/feriadosFacultativos";
-import { feriadosNacio } from "./src/js/Feriados/feriadosNacionais";
-import { feriadosNacio } from "./src/js/Feriados/feriadosNacionais";
-//import { feriadosEstad } from "./Feriados/feriadosEstaduais";
 import interactionPlugin from "@fullcalendar/interaction";
 
+import { feriadosFacul } from "./src/js/Feriados/feriadosFacultativos";
+import { feriadosNacio } from "./src/js/Feriados/feriadosNacionais";
+
+
+
+// Separando os elementos com o DOM
 const formAdicionar = document.querySelector(".formDta");
 const textoInfo = document.querySelector(".infoText");
 const facEl = document.getElementById("feri-fac");
 const nacEl = document.getElementById("feri-nac");
 
+// Crição do calendário
 let calendarEl = document.getElementById("calendar");
 let calendar = new Calendar(calendarEl, {
   plugins: [dayGridPlugin, interactionPlugin],
@@ -41,7 +44,7 @@ let calendar = new Calendar(calendarEl, {
 });
 calendar.render();
 
-// Var global
+// Var global, alterada nas funções que usam o ID para identificar o evento
 let idEvento = "";
 
 // O evento é delegado ao parente Calendário
@@ -49,6 +52,7 @@ const calendarioCompleto = document.querySelector(".fc-dayGridMonth-view");
 calendarioCompleto.addEventListener("click", function (e) {
   // Escutando se o alvo foi nessa classe
   if (e.target.closest(".fc-event")) {
+    // Envia os dados do evento que existem no elemento fc-event
     renderizarForm(e.target.closest(".fc-event").fcSeg.eventRange.def);
   }
 });

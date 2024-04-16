@@ -1,5 +1,5 @@
 // De https://github.com/joaopbini/feriados-brasil/blob/master/dados/feriados/nacional/json/2024.json
-import Feriados from "./Feriados";
+import { formatarFeriado } from "./Feriados";
 const feriadosNacionais = [
   {
     data: "01/01/2024",
@@ -84,6 +84,7 @@ const feriadosNacionais = [
   },
 ];
 
+// Envia os dados para serem formatados e retorna para o que chamou está função
 export const feriadosNacio = feriadosNacionais.map(feri => {
-    return Feriados.formatarFeriado(feri,"nacionais","purple")
+    return formatarFeriado(feri,"nacionais","purple")
 })

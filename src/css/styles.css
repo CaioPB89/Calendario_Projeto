@@ -18,27 +18,24 @@ body {
   text-align: center;
   font-family: "Times New Roman", Times, serif;
 }
-.infoButton{
-  transform: translate(900,20);
-  background-color: gray;
-  font-size: larger;
-  border-radius: 50%;
-  padding-left: 10;
-  padding-right: 10;
-}
+
+/* Checkbox feriados */
 .checkboxs {
   text-align: center;
   font-size: large;
   font-family: "Times New Roman", Times, serif;
   margin-top: 0.2%;
 }
+/*  */
 
-.buttonRemoverEvento {
-  border-radius: 50%;
+/* Limpar todos os customs */
+.limparEventos{
+  outline: black solid 2px;
+  transform: translate(10%);
 }
+/*  */
 
 /* Funcionalidades do calendário */
-
 .fc-toolbar-title {
   text-transform: capitalize;
   font-family: "Times New Roman", Times, serif;
@@ -66,7 +63,7 @@ body {
 .fc-daygrid-day-frame {
   background-color: white;
 }
-
+/*  */
 
 /* Form de input de evento */
 .formDta {
@@ -82,7 +79,6 @@ body {
   z-index: 1000;
   display: none;
 }
-
 /*  Atributos do form */
 .opções {
   text-align: left;
@@ -114,8 +110,17 @@ body {
   outline: black solid 1px;
   margin-bottom: 2%;
 }
+/*  */
 
-
+/* Botão de informação */
+.infoButton{
+  transform: translate(900,20);
+  background-color: gray;
+  font-size: larger;
+  border-radius: 50%;
+  padding-left: 10;
+  padding-right: 10;
+}
 .infoText{
   position: fixed;
   font-family: 'Times New Roman', Times, serif;
@@ -128,7 +133,6 @@ body {
   padding-right: 2%;
   padding-bottom: 2%;
 }
-
 .buttonClose{
   margin-top: 1%;
   transform: translate(500%);
@@ -137,7 +141,3 @@ body {
   outline: black solid 3px;
 }
 
-.limparEventos{
-  outline: black solid 2px;
-  transform: translate(10%);
-}
