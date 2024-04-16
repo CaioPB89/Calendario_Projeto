@@ -16,3 +16,10 @@ Para uso, é necessario a instalação dos pacotes NPM utilizando:
 npm -i
 
 O projeto foi "construido" com uso do Parcel;
+
+ "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html --dist-dir ./dist"
+  },
+  
+Com start sendo utilizado para teste e build para a criação da versão final a ser colocado em um site;
