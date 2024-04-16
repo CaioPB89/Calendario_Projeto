@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+  <head>
+    <link rel="stylesheet" href="src/css/styles.css" />
+    <link rel="icon" type="image/x-icon" href="src/img/favicon.ico"/>
+    <meta charset="utf-8" />
+    <script src="./script.js" type="module"></script>
+    <title>Calendario Para Provas</title>
+  </head>
+  <body>
+    <h1 class="cabecario-pagina">
+      Calendário para Provas, Atividades e Eventos 2024
+    </h1>
+    <div id="calendar"></div>
+    <div class="checkboxs">
+      <input type="checkbox" name="Pontos Facultativos" id="feri-fac" />Pontos
+      Facultativos
+      <input type="checkbox" name="Feriados Nacionais" id="feri-nac" />Feriados
+      Nacionais
+      <button type="button" class="limparEventos"> Limpar todos os eventos customizados </button>
+    </div>
+    <button type="button" class="infoButton">?</button>
+      <!-- HTML do form de adicionar evento -->
+      <div class="formDta">
+        <!-- The form -->
+        <div class="form-popup" id="myForm">
+          
+          <form class="form-container">
+            <h2 class="formTitle">Modificação de Evento</h2>
+            <div class="opções">
+              <label ><b>Nome do evento</b></label>
+              <input
+                class="nome_evento"
+                type="text"
+                placeholder="..."
+                name="descritivo"
+                required
+              />
+              <div></div>
+              <label><b>Cor do evento</b></label>
+              <input type="color" name="corEvento" class="corEvento" />
+            </div>
+            <div class="botões">
+              <button type="button" class="btn_modify">Modificar</button>
+              <button type="button" class="btn_remove">Remover</button>
+              <button type="button" class="btn_cancel">Cancelar</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    
+    <div class="infoText" style="display: none;">
+      <h1>Como usar o calendário</h1>
+      <p> Mostrar feriados -> Os dados referentes a feriados são carregados para a aplicação diretamente, mas você pode marcar ou retirar a marcação para eles serem exibidos utilizando os botões abaixo do calendário.</p>
+      <p> Modificar eventos -> Para adicionar um evento, clique no dia para adicionar uma marcação, então clique na marcação para modificar o titulo, cor, hora ou o remover.</p>
+      <p> Todos os eventos são salvos no armazenamento local. Caso queira limpar todos os eventos, use o botão "Limpar todos os eventos customizados"</p>
+      <button type="button" class="buttonClose">Eu entendo</button>
+    </div>
+  </body>
+</html>

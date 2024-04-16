@@ -1,0 +1,143 @@
+:root {
+  --fc-border-color: black;
+  --fc-daygrid-event-dot-width: 5px;
+  --fc-today-bg-color: lightgray;
+}
+
+body {
+  background-color: white;
+}
+
+.cabecario-pagina {
+  margin-left: -0.4%;
+  margin-right: -0.4%;
+  margin-top: -0.5%;
+  margin-bottom: 0.2%;
+  padding: auto;
+  background-color: gray;
+  text-align: center;
+  font-family: "Times New Roman", Times, serif;
+}
+.infoButton{
+  transform: translate(900,20);
+  background-color: gray;
+  font-size: larger;
+  border-radius: 50%;
+  padding-left: 10;
+  padding-right: 10;
+}
+.checkboxs {
+  text-align: center;
+  font-size: large;
+  font-family: "Times New Roman", Times, serif;
+  margin-top: 0.2%;
+}
+
+.buttonRemoverEvento {
+  border-radius: 50%;
+}
+
+/* Funcionalidades do calendário */
+
+.fc-toolbar-title {
+  text-transform: capitalize;
+  font-family: "Times New Roman", Times, serif;
+}
+
+/*  Para o style do dia atual sobrepor o dos outros quadros, uso > junto com !important */
+.fc-day-today > .fc-daygrid-day-frame {
+  color: red;
+  background-color: var(--fc-today-bg-color) !important;
+  /*  O css do dia atual usa uma variavel para ser colorido  */
+}
+
+/*  Palavras do semanal */
+.fc-col-header-cell-cushion {
+  color: black;
+  text-transform: capitalize;
+}
+
+/* Dias da semana */
+.fc-scrollgrid-sync-inner {
+  background-color: gray;
+}
+
+/*  O interno dos quadros */
+.fc-daygrid-day-frame {
+  background-color: white;
+}
+
+
+/* Form de input de evento */
+.formDta {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  font-family: "Times New Roman", Times, serif;
+  transform: translate(-50%, -60%);
+  background-color: white;
+  padding: 1rem 10rem;
+  box-shadow: 5rem 8rem 6rem rgba(0, 0, 0, 0.25);
+  outline: black solid 5px;
+  z-index: 1000;
+  display: none;
+}
+
+/*  Atributos do form */
+.opções {
+  text-align: left;
+  outline: black solid 2px;
+  margin-bottom: 3%;
+  margin-right: -6%;
+  margin-left: -6%;
+  padding-left: 5%;
+  padding-top: 2%;
+}
+.formTitle{
+  font-family: 'Times New Roman', Times, serif;
+  margin-bottom: 2%;
+  margin-top: 1%;
+}
+.botões {
+  transform: translate(-10%);
+  padding-top: 1%;
+  padding-bottom: 1%;
+  margin-left: 20%;
+  margin-right: 8%;
+  outline: black solid 2px;
+}
+.corEvento {
+  transform: translate(27%);
+  margin-bottom: 2%;
+}
+.nome_evento {
+  outline: black solid 1px;
+  margin-bottom: 2%;
+}
+
+
+.infoText{
+  position: fixed;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: medium;
+  transform: translate(15%, -250%);
+  background-color: white;
+  z-index: 100;
+  outline: black solid 5px;
+  padding-left: 2%;
+  padding-right: 2%;
+  padding-bottom: 2%;
+}
+
+.buttonClose{
+  margin-top: 1%;
+  transform: translate(500%);
+  font-size: large;
+  background-color: white;
+  outline: black solid 3px;
+}
+
+.limparEventos{
+  outline: black solid 2px;
+  transform: translate(10%);
+}
