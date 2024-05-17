@@ -1,4 +1,4 @@
-# Projeto Caledário
+# Projeto Calendário
 
 Uma aplicação WEB que usa da biblioteca "https://fullcalendar.io/" para criar um calendário com eventos customizável;
 
